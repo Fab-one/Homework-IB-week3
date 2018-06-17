@@ -1,15 +1,15 @@
-import * as React from 'react'
+import React, { Component } from 'react'
 import StartGame from './StartGame'
 import { connect } from 'react-redux'
-import { showGuess } from '../lib/game'
 
-class StartGameContainer extends React.PureComponent {
-  startGame() {
-    console.log('The word is', showGuess)
-  }
-
+class StartGameContainer extends Component {
   render() {
-    return <StartGame />
+    StartGame()
+    return (
+      <div>
+        <StartGame />
+      </div>
+    )
   }
 }
 
